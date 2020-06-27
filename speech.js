@@ -3,7 +3,7 @@ try {
     var recognition = new SpeechRecognition()
 } catch (error) { }
 
-var regex = /^\d{2}$/
+var regex = /^\d{1,3}$/
 
 if (recognition) {
     recognition.continuous = false
@@ -25,7 +25,7 @@ if (recognition) {
     }
 
     recognition.onnomatch = function () {
-        alert("I didn't recognise that color.")
+        alert("Eu não entendi o que você disse")
     }
 
     recognition.onerror = function (event) {
