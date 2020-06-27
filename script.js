@@ -18,6 +18,8 @@ function novoJogo() {
     var divResultado = document.getElementById("numA")
 
     divResultado.innerHTML = primeiroNumero + " x " + segundoNumero
+
+    if (recognition) recognition.start();
 }
 
 function gerarResultado() {
